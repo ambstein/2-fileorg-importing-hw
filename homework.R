@@ -19,7 +19,6 @@
 
 library(readr)
 
-
 ### QUESTION 2 ----- 
 
 # Read in the data for 6191_1.txt using here()
