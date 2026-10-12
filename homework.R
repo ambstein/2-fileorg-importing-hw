@@ -128,11 +128,10 @@ ds <- read_tsv(data_A_all_fullnames,
                )
 glimpse(ds)
 
-
 ds$trial_num_corrected <- ds$trial_num + 100
 glimpse(ds)
 
-#iccl=integer, character, character, logical no need to separate by commas
+#iccl = integer, character, character, logical; no need to separate by commas
 
 
 ### QUESTION 7 -----
@@ -143,7 +142,21 @@ glimpse(ds)
 # Re-import the data so that filename becomes a column
 
 # 7 -- ANSWER
+glimpse(ds)
+?read_tsv
+ds <- read_tsv(data_A_all_fullnames,
+               skip = 7,
+               col_names = c("trial_num",
+                             "speed_actual",
+                             "speed_response",
+                             "correct"),
+               col_types = "iccl",
+               id = "participant_id"
+               )
 
+
+ds$trial_num_corrected <- ds$trial_num + 100
+glimpse(ds)
 
 ### QUESTION 8 -----
 
@@ -151,5 +164,14 @@ glimpse(ds)
 # Install the readxl package, load it, and use it to read in the .xlsx data in data_B
 # There are two sheets of data -- import each one into a new tibble
 
-# ANSWER
+# 8 -- ANSWER
 
+library(readxl)
+read_xlsx("data_B/participant_info.xlsx")
+
+sheet1 <- read_excel("data_B/participant_info.xlsx", sheet = 1)
+print(sheet1)
+sheet2 <- read_excel("data_B/participant_info.xlsx", sheet = 2, col_names = FALSE)
+print(sheet2)
+# needed col_names False to be able to have correct formatting for sheet 2 
+# because our first column does have data
