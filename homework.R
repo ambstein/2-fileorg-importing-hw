@@ -90,14 +90,20 @@ write_csv(ds1, file="data_A_cleaned/6191_1_10112026.csv")
 data_A_all_fullnames <- list.files('data_A', full.names = TRUE)
 data_A_all_fullnames
 
-
-
 ### QUESTION 5 ----- 
 
 # Read all of the files in data_A into a single tibble called ds
 
-# ANSWER
+# 5 -- ANSWER
 
+ds <- read_tsv(data_A_all_fullnames,
+               skip = 7,
+               col_names = c("trial_num",
+                             "speed_actual",
+                             "speed_response",
+                             "correct")
+               )
+glimpse(ds)
 
 ### QUESTION 6 -----
 
@@ -109,7 +115,24 @@ data_A_all_fullnames
 # After fixing it, create the column to add 100 to the trial numbers 
 # (It should work now, but you'll see a warning because of the erroneous data point)
 
-# ANSWER
+# 6 -- ANSWER
+#data_A_all_fullnames <- ds$trial_num + 100
+
+ds <- read_tsv(data_A_all_fullnames, 
+               skip = 7,
+               col_names = c("trial_num",
+                             "speed_actual",
+                             "speed_response",
+                             "correct"), 
+               col_types = "iccl"
+               )
+glimpse(ds)
+
+
+ds$trial_num_corrected <- ds$trial_num + 100
+glimpse(ds)
+
+#iccl=integer, character, character, logical no need to separate by commas
 
 
 ### QUESTION 7 -----
@@ -119,7 +142,7 @@ data_A_all_fullnames
 # Read the help file for read_tsv to use the "id" argument to capture that information in the file
 # Re-import the data so that filename becomes a column
 
-# ANSWER
+# 7 -- ANSWER
 
 
 ### QUESTION 8 -----
