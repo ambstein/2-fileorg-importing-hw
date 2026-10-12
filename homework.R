@@ -69,17 +69,20 @@ glimpse(ds1)
 # Write the new data from question 3a to a CSV file in the "data_A_cleaned" folder
 # Make sure to include code to create a "data_A_cleaned" folder if it doesn't already exist
 # Choose a naming convention for this new dataset (ex. snake_case, no spaces, a date or version prefix/suffix)
-# Add one commend explaining your naming choice
+# Add one comment explaining your naming choice
 
-# ANSWER
-
+# 3b -- ANSWER
+if (!dir.exists("data_A_cleaned")) dir.create("data_A_cleaned")
+# I have chosen snake_case because that is what r uses on the back-end and is the most straightforward to this purpose.
+# I may sometimes mix lowerCamel with snake_case to create more efficient names if needed. 
+# But I'll try to stick to one or the other.
 
 ### QUESTION 4 ----- 
 
 # Use list.files() to get a list of the full file names of everything in "data_A"
 # Store it to a variable
 
-# ANSWER
+# 4 -- ANSWER
 
 
 ### QUESTION 5 ----- 
