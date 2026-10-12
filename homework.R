@@ -45,7 +45,7 @@ read_tsv(here("data_A","6191_1.txt"))
 # A list of column names are provided to use:
 #col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
-# MY ANSWER
+# 2 -- ANSWER
 ds1 <- read_tsv(here("data_A","6191_1.txt"),
                 skip = 7,
                 col_names = c("trial_num","speed_actual","speed_response","correct")
@@ -54,15 +54,13 @@ ds1 <- read_tsv(here("data_A","6191_1.txt"),
 #   I used the "skip = 7" argument because we were told to skip the header info
 #   I used the col_names = c() argument once I noticed we were provided with col names.
 
-
-
-
 ### QUESTION 3a. ----- 
 
 # For some reason, the trial numbers for this experiment should start at 100
 # Create a new column in ds1 that takes trial_num and adds 100
 
 # ANSWER
+
 
 
 ### QUESTION 3b. ----- 
