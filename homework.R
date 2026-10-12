@@ -59,8 +59,7 @@ ds1 <- read_tsv(here("data_A","6191_1.txt"),
 # For some reason, the trial numbers for this experiment should start at 100
 # Create a new column in ds1 that takes trial_num and adds 100
 
-# ANSWER
-
+# 3a -- ANSWER
 
 
 ### QUESTION 3b. ----- 
