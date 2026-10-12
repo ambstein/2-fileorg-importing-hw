@@ -1,4 +1,4 @@
-#PSYC 259 Homework 1 - Data Import
+#PSYC 259 Homework 1 - Data Import - Amberley R. Stein
 #For full credit, provide answers for at least 6/8 questions
 
 #List names of students collaborating with (no more than 2): 
