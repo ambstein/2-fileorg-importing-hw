@@ -39,13 +39,23 @@ read_tsv(here("data_A","6191_1.txt"))
 
 # using read_tsv because it is a .txt file. 
 # Skipping header information (rows 1-7) as per instructions, using skip = 7
-ds1 <- read_tsv(here("data_A","6191_1.txt"), skip = 7, col_names = FALSE)
+
+# oops I see now they provided column names; keeping for transparency ds1 <- read_tsv(here("data_A","6191_1.txt"), skip = 7, col_names = FALSE)
 
 # A list of column names are provided to use:
+#col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
-col_names  <-  c("trial_num","speed_actual","speed_response","correct")
+# MY ANSWER
+ds1 <- read_tsv(here("data_A","6191_1.txt"),
+                skip = 7,
+                col_names = c("trial_num","speed_actual","speed_response","correct")
+                )
+# my explanation: I used read_tsv because its a .txt file and that seemed the most appropriate.
+#   I used the "skip = 7" argument because we were told to skip the header info
+#   I used the col_names = c() argument once I noticed we were provided with col names.
 
-# ANSWER
+
+
 
 ### QUESTION 3a. ----- 
 
