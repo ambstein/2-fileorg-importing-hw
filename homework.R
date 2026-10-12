@@ -2,6 +2,7 @@
 #For full credit, provide answers for at least 6/8 questions
 
 #List names of students collaborating with (no more than 2): 
+# Dylan, Sarah (completed mostly alone, but some collaboration happened)
 
 #GENERAL INFO 
 #data_A contains 12 files of data. 
@@ -20,6 +21,7 @@
 library(readr)
 library(here)
 library(fs)
+library(tidyverse)
 
 ### QUESTION 2 ----- 
 
@@ -60,7 +62,8 @@ ds1 <- read_tsv(here("data_A","6191_1.txt"),
 # Create a new column in ds1 that takes trial_num and adds 100
 
 # 3a -- ANSWER
-
+ds1$trial_num_corrected <- ds1$trial_num + 100
+glimpse(ds1)
 
 ### QUESTION 3b. ----- 
 # Write the new data from question 3a to a CSV file in the "data_A_cleaned" folder
