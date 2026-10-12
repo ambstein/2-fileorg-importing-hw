@@ -18,17 +18,28 @@
 # Load the readr package
 
 library(readr)
+library(here)
+library(fs)
 
 ### QUESTION 2 ----- 
 
 # Read in the data for 6191_1.txt using here()
+
 # Hint 1: use getwd first to check working directory
+getwd()
 # Hint 2: make sure you let R know about the data_A subfolder
+file.exists(here("data_A","6191_1.txt"))
 # Hint 3: nest the readr and here() functions 
+read_tsv(here("data_A","6191_1.txt"))
 # Store it to an object called ds1
 # Ignore the header information, and just import the 20 trials
 # Be sure to look at the format of the file to determine what read_* function to use
 # And what arguments might be needed
+?read_tsv
+
+# using read_tsv because it is a .txt file. 
+# Skipping header information (rows 1-7) as per instructions, using skip = 7
+ds1 <- read_tsv(here("data_A","6191_1.txt"), skip = 7, col_names = FALSE)
 
 # A list of column names are provided to use:
 
