@@ -73,6 +73,10 @@ glimpse(ds1)
 
 # 3b -- ANSWER
 if (!dir.exists("data_A_cleaned")) dir.create("data_A_cleaned")
+
+# writing CSV file for new dataset
+write_csv(ds1, file="data_A_cleaned/6191_1_10112026.csv")
+
 # I have chosen snake_case because that is what r uses on the back-end and is the most straightforward to this purpose.
 # I may sometimes mix lowerCamel with snake_case to create more efficient names if needed. 
 # But I'll try to stick to one or the other.
@@ -83,6 +87,9 @@ if (!dir.exists("data_A_cleaned")) dir.create("data_A_cleaned")
 # Store it to a variable
 
 # 4 -- ANSWER
+data_A_all_fullnames <- list.files('data_A', full.names = TRUE)
+data_A_all_fullnames
+
 
 
 ### QUESTION 5 ----- 
